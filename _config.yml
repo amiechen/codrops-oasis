@@ -1,0 +1,13 @@
+title: Oasis
+
+description: >-
+  a jekyll site template for Codrops.
+baseurl: ""
+url: ""
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed

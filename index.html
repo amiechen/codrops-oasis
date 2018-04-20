@@ -1,0 +1,265 @@
+---
+layout: oasis
+css: oasis
+nav:
+  - name: home
+    link: '#section-hero'
+  - name: snippets
+    link: '#section-snippets'
+  - name: features
+    link: '#section-features'
+  - name: stats
+    link: '#section-stats'
+  - name: integration
+    link: '#section-integrations'
+  - name: customers
+    link: '#section-customers'
+  - name: contact
+    link: '#section-contact'
+section-hero:
+  title: Oasis
+  description: Error tracking and monitor all your server status at all time. Prevent incidents and be efficient.
+  image: "images/hero-phone.png"
+section-summary:
+  title: Reliable Monitoring System
+  list:
+    - img: "images/summary-github.png"
+      text: works on phone and all devices
+    - img: "images/summary-cpu.png"
+      text: free status page for monitoring
+    - img: "images/summary-dollar.png"
+      text: easy integrations and setup
+  text: >-
+    For some systems, latency and throughput are coupled entities. In TCP/IP, latency can also directly affect throughput. In TCP connections, the large bandwidth-delay product of high latency connections, combined with relatively small TCP window sizes on many devices, effectively causes the throughput of a high latency connection to drop sharply with latency.
+    <br><br>
+    This can be remedied with various techniques, such as increasing the TCP congestion window size, or more drastic solutions, such as packet coalescing, TCP acceleration, and forward error correction, all of which are commonly used for high latency satellite links.
+section-snippets:
+  title: Easy tracking of all Your stats
+  cards:
+    - text: Health check on the latest selected time range
+      stats: OK
+    - text: The average ping up time of selected time range
+      stats: 95%
+    - text: Average latency in the selected time range
+      stats: 19ms
+    - text: Shows the average packet lost in selected time range
+      stats: 0.1
+    - text: Error rate of bit transmission in selected time range
+      stats: 0.02%
+  description: >-
+    Throughput is controlled by available bandwidth, as well as the available signal-to-noise ratio and hardware limitations. Throughput for the purpose of this article will be understood to be measured from the arrival of the first bit of data at the receiver, to decouple the concept of throughput from the concept of latency.
+    <br><br>
+    Choice of an appropriate time window will often dominate calculations of throughput.
+section-features:
+  title: Features of Oasis
+  description: TCP acceleration converts the TCP packets into a stream that is similar to UDP. Because of this, the TCP acceleration software must provide its own mechanisms to ensure the reliability of the link.
+  image: "images/features-image.png"
+  features-left:
+    - img: "images/features-circle.svg"
+      text: Performance issues such as throughput and end-to-end delay are also addressed.
+    - img: "images/features-polygon.svg"
+      text: Many systems can be characterized as dominated either by throughput limitations or by latency limitations in terms of end-user utility or experience. 
+    - img: "images/features-rec.svg"
+      text: In some cases, hard limits such as the speed of light present unique problems to such systems and nothing can be done to correct this.
+  features-right:
+    - img: "images/features-star.svg"
+      text: Other systems allow for significant balancing and optimization for best user experience.
+    - img: "images/features-triangle.svg"
+      text: A telecom satellite in geosynchronous orbit imposes a path length of at least 71000 km between transmitter and receiver.
+    - img: "images/features-rec.svg"
+      text: This delay can be very noticeable and affects satellite phone service regardless of available throughput capacity.
+section-stats:
+  title: Stats on Oasis
+  description: These long path length considerations are exacerbated when communicating with space probes and other long-range targets beyond Earth's atmosphere.
+  stats-list:
+    - id: stats-0
+      name: A/B Split
+      number: A/B
+    - id: stats-1
+      name: Crash Rate
+      number: 89%
+    - id: stats-2
+      name: Error reporting API - Uptime
+      number: 100
+    - id: stats-3
+      name: General API
+      number: 81rps
+    - id: stats-4
+      name: Data Access API
+      number: 93%
+    - id: stats-5
+      name: Average Latency
+      number: 1.98ms
+section-integrations:
+  title: Trusted by
+  logos:
+    - img: images/logos/1.svg
+      name: airbnb
+    - img: images/logos/2.svg
+      name: twitter
+    - img: images/logos/3.svg
+      name: eventbrite
+    - img: images/logos/4.svg
+      name: netflix
+    - img: images/logos/5.svg
+      name: google
+    - img: images/logos/6.svg
+      name: spotify
+section-customers:
+  title: What customers are saying
+  slides:
+    - title: Oasis provides a robust synopsis of our service statuses
+      paragraph: Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. 
+      image: images/customer-1.png
+    - title: Oasis has brought clarity to our architecture
+      paragraph: Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+      image: images/customer-2.png
+section-contact:
+  title: Ready to get started?
+  description: Sign up here and our representative will contact you shortly.
+  btn-text: Sign Up
+---
+<nav class="nav--desktop">
+  {% for item in page.nav %}
+    <a href="{{site.url}}{{item.link}}" class="js-btn" data-hover="{{ item.name }}">{{ item.name }}</a>
+  {% endfor %}
+</nav>
+<nav class="nav--mobile">
+  <div class="nav--icon"><i class="fas fa-cube"></i></div>
+  <div class="mobile-list">
+    <div class="centered">
+      {% for item in page.nav %}
+        <a href="{{site.url}}{{item.link}}" class="js-btn" data-hover="{{ item.name }}">{{ item.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>
+<section class="section--hero">
+  <div class="flex--horizontal">
+    <div class="flex_child--horizontal aligner">
+      <h1 class="font-fjalla">{{ page.section-hero.title }}</h1>
+      <p class="">{{ page.section-hero.description }}</p>
+      <a href="" class="cta">
+        <strong>Download From</strong><br>
+        <small>App Store</small>
+      </a>
+    </div>
+    <div class="flex_child--horizontal fadeInUp">
+      <img src="{{ page.section-hero.image }}"  alt="">
+    </div>
+  </div>
+</section>
+<section class="section--summary">
+  <div class="flex--vertical">
+    <div class="flex_child--vertical flex--horizontal summary__lists">
+      {% for list in page.section-summary.list %}
+        <div class="summary__list flex--horizontal fadeIn">
+          <img src="{{ list.img }}" alt="">
+          <p>{{ list.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="flex_child--vertical flex--horizontal aligner fadeIn">
+      <p>{{ page.section-summary.text }}</p>
+      <h2 class="font-fjalla aligner_item--bottom">{{ page.section-summary.title }}</h2>
+    </div>
+  </div>
+</section>
+<section class="section--snippets scroll-to-reveal js-section">
+  <div class="flex--horizontal">
+    <div class="snippets__cards flex--vertical">
+      {% for card in page.section-snippets.cards %}
+        <div class="snippets__card flex--horizontal">
+          <p>{{ card.text }}</p>
+          <h3 class="font-fjalla">{{ card.stats }}</h3>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="snippets__content animated fadeInDown">
+      <h3 class="font-fjalla snippets__title">{{ page.section-snippets.title }}</h3>
+      <p class="snippets__description">{{ page.section-snippets.description }}</p>
+    </div>
+  </div>
+</section>
+<section class="section--features scroll-to-reveal js-section">
+  <div class="section__title">
+    <h3 class="font-fjalla">{{ page.section-features.title }}</h3>
+    <p>{{ page.section-features.description }}</p>
+  </div>
+  <div class="flex--horizontal">
+    <div class="features__left aligner flex--vertical">
+      {% for feature in page.section-features.features-left %}
+        <div class="flex--vertical fadeInLeft fadeInLeft--{{ forloop.index0 }}">
+          <object type="image/svg+xml" data="{{ feature.img }}"></object>
+          <p>{{ feature.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <img class="features__image" src="{{ page.section-features.image }}" alt="">
+    <div class="features__right aligner flex--vertical">
+      {% for feature in page.section-features.features-right %}
+        <div class="flex--vertical fadeInRight fadeInRight--{{ forloop.index0 }}">
+          <object type="image/svg+xml" data="{{ feature.img }}"></object>
+          <p>{{ feature.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section--stats scroll-to-reveal js-section">
+  <div class="section__title">
+    <h3 class="font-fjalla">{{ page.section-stats.title }}</h3>
+    <p>{{ page.section-stats.description }}</p>
+  </div>
+  {% for stats in page.section-stats.stats-list %}
+    <div class="stats__block">
+      <div class="flex--horizontal">
+        <h5 class="stats__name">{{ stats.name }}</h5>
+        <h4 class="font-fjalla stats__result">{{ stats.number }}</h4>
+      </div>
+      <div class="stats">
+        <canvas id="{{ stats.id }}" ></canvas>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+<section class="section--integrations js-section">
+  <div class="section__title">
+    <h3 class="font-fjalla">{{ page.section-integrations.title }}</h3>
+  </div>
+  <div class="flex--horizontal">
+    {% for logo in page.section-integrations.logos %}
+      <img src="{{ logo.img }}" alt="{{ logo.name }}" class="logo">
+    {% endfor %}
+  </div>
+</section>
+<section class="section--customers js-section">
+  <div class="section__container">
+    <h4 class="title">{{ page.section-customers.title }}</h4>
+    <div class="slide__container">
+      {% for slide in page.section-customers.slides %}
+        <div>
+          <div class="flex--horizontal slide">
+            <div class="slide__content">
+              <h4 class="font-fjalla slide-{{forloop.index}}">{{ slide.title }}</h4>
+              <p class="slide-{{forloop.index}}">{{ slide.paragraph }}</p>
+            </div>
+            <div class="slide__image slide-{{forloop.index}}">
+              <img src="{{ slide.image }}" alt="slide image" >
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section--contact js-section">
+  <div class="section__title">
+    <h3 class="font-fjalla">{{ page.section-contact.title }}</h3>
+    <p>{{ page.section-contact.description }}</p>
+    <div class="form-group">
+      <input type="text" class="input" placeholder="Your Email">
+      <button class="input-button">Sign Up</button>
+    </div>
+  </div>
+</section>

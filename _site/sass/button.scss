@@ -1,0 +1,28 @@
+.cta {
+  background: $purple-5;
+  border-radius: 3px;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.45rem 0.6rem;
+  outline: 0;
+  width: 80%;
+  max-width: 230px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  &:after {
+    position: absolute;
+    content: "";
+    background-image: url(/images/apple.png);
+    right: 0.5rem;
+    top: 20%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

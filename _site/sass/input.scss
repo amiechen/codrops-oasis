@@ -1,0 +1,30 @@
+.form-group {
+  display: flex;
+  align-items: stretch;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.input {
+  border: 1px solid $gray-3;
+  flex: 1 1 auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-button {
+  padding: 0.5rem 1rem;
+  margin-left: -1px;
+  border: none;
+  font-size: 0.8rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: $purple-5;
+  color: white;
+  width: 15%;
+}
