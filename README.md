@@ -4,11 +4,11 @@
 
 Oasis is a responsive Jekyll template designed for developers who want to set up a small landing page for their mobile applications. It is made with usability and simplicity in mind for you to easily customize.
 
-Check out the details on [Codrops]()
+Check out the details on [Codrops](https://tympanus.net/codrops/2018/04/20/freebie-oasis-jekyll-website-template/)
 
 ## Live Demo
 
-🔮 [Oasis Live Demo](https://tympanus.net/Freebies/)
+🔮 [Oasis Live Demo](https://tympanus.net/Freebies/oasis/)
 
 ## Running It Locally
 
