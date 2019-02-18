@@ -20,7 +20,7 @@ Check out the details on [Codrops](https://tympanus.net/codrops/2018/04/20/freeb
 cd codrops-oasis
 jekyll server
 
-// in same directory, but annother terminal window
+// in same directory, but another terminal window
 sass --watch sass/oasis.scss:oasis.css
 ```
 
