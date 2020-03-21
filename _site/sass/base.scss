@@ -40,6 +40,9 @@ nav {
     position: relative;
     &:not(:last-child) {
       margin-right: 2rem;
+      @media only screen and (max-width: 770px) {
+        margin-right: 0;
+      }
     }
     &:before {
       transition: 0.5s all ease;

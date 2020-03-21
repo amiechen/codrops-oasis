@@ -134,7 +134,11 @@ section {
   }
   &:before {
     position: absolute;
-    background: radial-gradient(#5d4688 0%, #efb5dd21 30%, #27253f 70%);
+    background: radial-gradient(
+      #5d4688 0%,
+      unquote("#efb5dd21") 30%,
+      #27253f 70%
+    );
     content: "";
     top: 30px;
     right: -40px;
