@@ -1,0 +1,3 @@
+# remove cache
+.jekyll-cache/
+_site/
